@@ -13,8 +13,7 @@ public class ByteStream {
     
     public static void main(String[] args) {
         try {
-            FileInputStream in = new FileInputStream("C:\\Users\\Mr.Ahmed\\Desktop\\Java -Alex Center\\Lec -06\\"
-                    + "Java IO Test\\src\\fileClass_Demo\\flower.jpg");
+            FileInputStream in = new FileInputStream("ex_files\\flower.jpg");
             FileOutputStream out = new FileOutputStream("D:\\newText.txt");
             int c;
             while ((c =in.read())!=-1) {
