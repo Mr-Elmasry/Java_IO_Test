@@ -11,12 +11,13 @@ import javax.swing.JFileChooser;
 // JFileChooser * .getSelectedFile
 // .showOpenDialog() * .showSaveDialog()
 public class FileChooser {
+
     public static void main(String[] args) {
         try {
             File f = null;
             JFileChooser fChsr = new JFileChooser();
             int ret = fChsr.showOpenDialog(null);
-            if (ret == JFileChooser.APPROVE_OPTION ) {
+            if (ret == JFileChooser.APPROVE_OPTION) {
                 f = fChsr.getSelectedFile();
             }
             Scanner scnr = new Scanner(f);
