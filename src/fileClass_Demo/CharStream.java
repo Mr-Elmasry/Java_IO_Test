@@ -11,6 +11,8 @@ import java.io.IOException;
 public class CharStream {    
     public static void main(String[] args) {
         try {
+            //Create a Character Stream Objects
+            // suitable for text files
             FileReader in = new FileReader("ex_files\\flower.jpg");
             FileWriter out = new FileWriter("ex_files\\CopyofFlower.jpg");
             int c;
