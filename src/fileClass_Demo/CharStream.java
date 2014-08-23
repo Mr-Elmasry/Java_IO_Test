@@ -15,6 +15,7 @@ public class CharStream {
             // suitable for text files
             FileReader in = new FileReader("ex_files\\flower.jpg");
             FileWriter out = new FileWriter("ex_files\\CopyofFlower.jpg");
+            // the output file does not display the Image 
             int c;
             while ((c =in.read())!=-1) {
                 out.write(c);
