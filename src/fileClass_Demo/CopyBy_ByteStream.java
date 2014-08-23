@@ -3,21 +3,20 @@
  */
 package fileClass_Demo;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 
-public class CharStream {
+public class CopyBy_ByteStream {
 
     public static void main(String[] args) {
-
-        /*Create a Character Stream Objects
-         suitable for text files            
-         the output file does not display the Image */
-        try (FileReader in = new FileReader("ex_files\\flower.jpg");
-                FileWriter out = new FileWriter("ex_files\\CopyofFlower.jpg");){
-
+        try {
+            /*Create a Byte Stream Objects
+             suitable for any format        
+             the output file displays the Image */
+            FileInputStream in = new FileInputStream("ex_files\\flower.jpg");
+            FileOutputStream out = new FileOutputStream("ex_files\\new flower.jpg");
             int c;
             while ((c = in.read()) != -1) {
                 out.write(c);
@@ -29,6 +28,6 @@ public class CharStream {
         } catch (IOException ex) {
             System.out.println(ex);
         }
-
     }
+
 }

@@ -3,19 +3,21 @@
  */
 package fileClass_Demo;
 
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 
+public class CopyBy_CharStream {
 
-public class wordByteStream1 {
-    
     public static void main(String[] args) {
-        try {
-            FileInputStream in = new FileInputStream("ex_files\\ms_word.docx");
-            FileOutputStream out = new FileOutputStream("ex_files\\New.docx");
 
+        /*Create a Character Stream Objects
+         suitable for text files            
+         */
+        try (FileReader in = new FileReader("ex_files\\a.txt");
+             FileWriter out = new FileWriter("ex_files\\Copyof_a.txt");)
+        {
             int c;
             while ((c = in.read()) != -1) {
                 out.write(c);
@@ -27,6 +29,6 @@ public class wordByteStream1 {
         } catch (IOException ex) {
             System.out.println(ex);
         }
-    }
 
+    }
 }
