@@ -1,7 +1,7 @@
 /**
  * * @author Mr. Ahmed Elmasry WWW.FanniaBackbone.wikispaces.com/java *
  */
-package fileClass_Demo;
+package files_demos;
 
 import java.io.File;
 import java.io.FileNotFoundException;

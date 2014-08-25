@@ -1,7 +1,7 @@
 /**
  * * @author Mr. Ahmed Elmasry Mr_el_masry@yahoo.com *Date:Aug 13, 2014
  */
-package fileClass_Demo;
+package files_demos;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
